@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Zapatilla",
+    "price": 1000,
+    "thumbnail": "url",
+    "id": 1
+  },
+  {
+    "title": "Pantalon",
+    "price": 400,
+    "thumbnail": "url",
+    "id": 2
+  },
+  {
+    "title": "Remera",
+    "price": 300,
+    "thumbnail": "url",
+    "id": 3
+  }
+]
