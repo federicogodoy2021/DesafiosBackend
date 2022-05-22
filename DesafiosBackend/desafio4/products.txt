@@ -1,20 +1,38 @@
 [
   {
-    "title": "Zapatilla",
-    "price": 1000,
-    "thumbnail": "url",
+    "title": "Zapato modified by Put",
+    "price": 950,
+    "thumbnail": "newURL",
     "id": 1
   },
   {
-    "title": "Pantalon",
-    "price": 400,
-    "thumbnail": "url",
+    "title": "Short",
+    "price": 700,
+    "thumbnail": "Url",
     "id": 2
   },
   {
-    "title": "Remera",
-    "price": 300,
-    "thumbnail": "url",
+    "title": "Pantalones",
+    "price": 1950,
+    "thumbnail": "Ruta",
     "id": 3
+  },
+  {
+    "title": "Remeras",
+    "price": 1200,
+    "thumbnail": "Ruta",
+    "id": 4
+  },
+  {
+    "title": "Swetter",
+    "price": "12000",
+    "thumbnail": "ruta",
+    "id": 5
+  },
+  {
+    "title": "Swetter",
+    "price": "12000",
+    "thumbnail": "ruta",
+    "id": 6
   }
 ]

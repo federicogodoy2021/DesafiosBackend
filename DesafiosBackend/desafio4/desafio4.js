@@ -1,4 +1,5 @@
 const express = require('express')
+const { all } = require('express/lib/application')
 const Contenedor = require('./contenedor')
 
 //Invocando express
@@ -72,11 +73,12 @@ getAll()
 })
 
 //Agregando los productos a la api
-Routes.post('', (req, res) =>{
+Routes.post('/', (req, res) =>{
 
     let products = prods.getAll()
 
     let newProduct = req.body
+
     prods.save(newProduct)
 
     if(!products){
@@ -86,26 +88,56 @@ Routes.post('', (req, res) =>{
 })
 
 //Modificando los productos a la api según ID
-Routes.put(':id', (req, res) => {
-  let products = prods.getAll()
+Routes.put("/:id", (req, res) =>{
+  let { title, price, thumbnail } = req.body;
 
-  const id = Number(req.params.id)
-  const prodIndex = products.findIndex(prod => prod.id === id)
- 
-  if(prodIndex === -1){
-      return res.status(404).json({
-          error: 'Producto no encontrado'
-      })
+  async function modifyById(){
+    try {
+      let modifiedProduct = await prods.getById(parseInt(req.params.id))
+
+      if (Object.keys(modifiedProduct).length === 0) {
+        res.send({ error : 'producto no encontrado' })
+      }
+      else{
+        modifiedProduct = {
+        title,
+        price,
+        thumbnail,
+        id : parseInt(req.params.id)
+      }
+        let allProducts = await prods.read();
+        allProducts = (JSON.parse(allProducts, null, 2))
+
+        let auxId = parseInt(req.params.id) - 1
+        allProducts.splice(auxId, 1, modifiedProduct)
+
+        await prods.write(allProducts, "Producto modificado correctamente")
+
+        res.send(allProducts);
+      }
+    } catch (error) {
+      throw Error("Error en put modificacion productos")
+    }
   }
+  modifyById();
 
-  const body = req.body
-
-  products[prodIndex].title = body.title
-  products[prodIndex].price = body.price
-  products[prodIndex].thumbnail = body.thumbnail
-
-  return res.json(products[prodIndex])
 })
 
+//Eliminando los productos a la api según ID
+Routes.delete('/:id', (req, res) =>{
+  async function deleteProductById(){
+    try {
+      let productToDelete = await prods.getById(parseInt(req.params.id))
 
-
+      if (Object.keys(productToDelete).length === 0) {
+        res.send({ error : 'producto no encontrado' })
+      }
+      else{
+        await prods.deleteById(parseInt(req.params.id))  
+        res.send(await prods.getAll())}
+      } catch (error) {
+      
+      throw Error ("Error en el delete por id");
+}}
+deleteProductById()
+})

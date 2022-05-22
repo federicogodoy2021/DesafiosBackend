@@ -107,8 +107,8 @@ async function test(){
 
     //Se guarda el nuevo producto
     //Se leen todos los productos por consola
-    console.log(await contenedor.getAll())
-}
+/*     console.log(await contenedor.modifyById(2))
+ */}
 test()
 
 module.exports = Contenedor
