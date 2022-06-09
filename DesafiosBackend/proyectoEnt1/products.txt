@@ -1,0 +1,26 @@
+[
+  {
+    "titleProduct": "Zapato modified by Put",
+    "priceProduct": 950,
+    "thumbnailProduct": "newURL",
+    "id": 1
+  },
+  {
+    "titleProduct": "Short",
+    "priceProduct": 700,
+    "thumbnailProduct": "Url",
+    "id": 2
+  },
+  {
+    "titleProduct": "Pantalones",
+    "priceProduct": 1950,
+    "thumbnailProduct": "Ruta",
+    "id": 3
+  },
+  {
+    "titleProduct": "Remeras",
+    "priceProduct": 1200,
+    "thumbnailProduct": "Ruta",
+    "id": 4
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "cartId": 1,
+    "products": [
+      {
+        "titleCart": "Zapato",
+        "priceCart": 900,
+        "thumbnailCart": "URL",
+        "id": 1
+      },
+      {
+        "titleCart": "Short",
+        "priceCart": 1000,
+        "thumbnailCart": "URL",
+        "id": 2
+      },
+      {
+        "titleCart": "Pantalones",
+        "priceCart": 2000,
+        "thumbnailCart": "URL",
+        "id": 3
+      },
+      {
+        "titleCart": "Remeras",
+        "priceCart": 1500,
+        "thumbnailCart": "URL",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "cartId": 2,
+    "products": [
+      {
+        "titleCart": "Zapato",
+        "priceCart": 1500,
+        "thumbnailCart": "URL2",
+        "id": 1
+      },
+      {
+        "titleCart": "Short",
+        "priceCart": 1200,
+        "thumbnailCart": "URL2",
+        "id": 2
+      },
+      {
+        "titleCart": "Pantalones",
+        "priceCart": 2100,
+        "thumbnailCart": "URL2",
+        "id": 3
+      },
+      {
+        "titleCart": "Remeras",
+        "priceCart": 1300,
+        "thumbnailCart": "URL2",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "cartId": 3,
+    "products": [
+      {
+        "titleCart": "Zapato",
+        "priceCart": 1100,
+        "thumbnailCart": "URL3",
+        "id": 1
+      },
+      {
+        "titleCart": "Short",
+        "priceCart": 900,
+        "thumbnailCart": "URL3",
+        "id": 2
+      },
+      {
+        "titleCart": "Pantalones",
+        "priceCart": 2200,
+        "thumbnailCart": "URL3",
+        "id": 3
+      },
+      {
+        "titleCart": "Remeras",
+        "priceCart": 1050,
+        "thumbnailCart": "ULR3",
+        "id": 4
+      }
+    ]
+  },
+  [
+    {
+      "titleCart": "Algo",
+      "priceCart": "20",
+      "thumbnailCart": "URL#"
+    }
+  ]
+]
